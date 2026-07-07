@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name Length Finder</title>
+    
+</head>
+<body>
+
+<div class="box">
+    <h2>Name Length Checker</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <br>
+    <button onclick="findLength()">Check Length</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    function findLength() {
+        let name = document.getElementById("nameInput").value;
+        let length = name.length;
+        document.getElementById("result").innerHTML =
+            "Your name has <b>" + length + "</b> characters.";
+    }
+</script>
+
+</body>
+</html>

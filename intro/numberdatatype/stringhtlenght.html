@@ -1,0 +1,32 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Letter Position</title>
+</head>
+<body>
+
+  <input type="text" id="name" placeholder="Enter your name">
+  <input type="text" id="letter" maxlength="1" placeholder="Enter a letter">
+  <button onclick="checkLetter()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkLetter() {
+      let name = document.getElementById("name").value;
+      let letter = document.getElementById("letter").value;
+      let position = name.indexOf(letter);
+
+      if (position !== -1) {
+        document.getElementById("result").innerHTML =
+          "Letter found at position: " + (position + 1);
+      } else {
+        document.getElementById("result").innerHTML =
+          "Letter not found.";
+      }
+    }
+  </script>
+
+</body>
+</html>
